@@ -1,0 +1,38 @@
+{
+  "name": "fantajapa",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bootstrap-icons": "^1.11.3",
+    "buffer": "^6.0.3",
+    "Buffer": "^0.0.0",
+    "jose": "^5.9.6",
+    "js-cookie": "^3.0.5",
+    "jwt-decode": "^4.0.0",
+    "sass": "^1.85.0",
+    "util": "^0.12.5",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@types/bcrypt": "^5.0.2",
+    "@types/js-cookie": "^3.0.6",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "bootstrap": "^5.3.3",
+    "inherits": "^2.0.4",
+    "process": "^0.11.10",
+    "safe-buffer": "^5.2.1",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.3",
+    "vue-tsc": "^2.1.10"
+  }
+}
