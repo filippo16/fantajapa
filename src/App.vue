@@ -144,7 +144,6 @@
       </section>
     </div>
   </div>
-  <button @click="test()">CIAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</button>
   <footer class="mt-auto py-3 text-center bg-primary">
     <div class="container-fluid">
       <span class="text-white">© 2024 Fantagioco. A scopo ludico. Sito non custodito.</span>
@@ -164,6 +163,7 @@ import { jwtDecode } from 'jwt-decode';
 import PopupConfirm from './components/PopupConfirm.vue';
 import PopupInput from './components/PopupInput.vue';
 import rulesData from '../public/legend.json';
+import axios from 'axios';
 
 export default defineComponent({
   components: { Popup, PopupConfirm, PopupInput },
@@ -198,9 +198,6 @@ export default defineComponent({
     }
   },
   methods: {
-    test() {
-      getUser("Pippo");
-    },
     logout() {
       Cookies.remove(this.COOKIE_NAME)
       window.location.reload()
