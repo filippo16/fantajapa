@@ -225,7 +225,7 @@ export default defineComponent({
       }
     },
     async getUser(name: string) {
-      const response = await fetch("http://localhost/get_user.php", {
+      const response = await fetch("http://localhost/get_user", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
@@ -244,7 +244,7 @@ export default defineComponent({
       }
     },
     async getUsers() {
-      const response = await fetch("http://localhost/get_users.php");
+      const response = await fetch("http://localhost/get_users");
       const result = await response.json();
 
       if (result.success) {
@@ -255,7 +255,7 @@ export default defineComponent({
       }
     },
     async addUser(name: string) {
-      const response = await fetch('http://localhost/save_user.php', { // httpss://fantagioco.altervista.org/save_user.php
+      const response = await fetch('http://localhost/save_user', { // httpss://fantagioco.altervista.org/save_user.php
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -287,7 +287,7 @@ export default defineComponent({
     },
     async sendSquad() {
       try {
-        const response = await fetch('http://localhost/save_squad.php', {
+        const response = await fetch('http://localhost/save_squad', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -326,7 +326,7 @@ export default defineComponent({
     },
     async sendLog(action_log: ActionLog) {
       try {
-        const response = await fetch('http://localhost/save_actionlog.php', {
+        const response = await fetch('http://localhost/save_log', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -351,7 +351,7 @@ export default defineComponent({
     },
     async delLog(id: number, name: string) {
       try {
-        const response = await fetch('http://localhost/delete_actionlog.php', {
+        const response = await fetch('http://localhost/delete_log', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -380,7 +380,7 @@ export default defineComponent({
         this.eventSource.close();
       }
 
-      this.eventSource = new EventSource('http://localhost/stream_logs.php');
+      this.eventSource = new EventSource('http://localhost/sse');
 
       this.eventSource.onmessage = (event) => {
         console.log('Received message:', event.data);
