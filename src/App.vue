@@ -144,6 +144,7 @@
       </section>
     </div>
   </div>
+  <button @click="test()">CIAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</button>
   <footer class="mt-auto py-3 text-center bg-primary">
     <div class="container-fluid">
       <span class="text-white">© 2024 Fantagioco. A scopo ludico. Sito non custodito.</span>
@@ -197,6 +198,9 @@ export default defineComponent({
     }
   },
   methods: {
+    test() {
+      getUser("Pippo");
+    },
     logout() {
       Cookies.remove(this.COOKIE_NAME)
       window.location.reload()
@@ -225,15 +229,15 @@ export default defineComponent({
       }
     },
     async getUser(name: string) {
-      const response = await fetch("http://localhost/get_user", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          name: name
-        })
+      console.log(name)
+      const response = await axios.post("http://localhost/get_user", {
+        name: name
+      }, {
+        headers: { "Content-Type": "application/json" }
       });
-      
-      const result = await response.json();
+      console.log(response)
+      const result = response.data;
+      console.log("Repsonse: ", result)
       
       if (result.success) {
         this.user = result.data;
@@ -255,16 +259,12 @@ export default defineComponent({
       }
     },
     async addUser(name: string) {
-      const response = await fetch('http://localhost/save_user', { // httpss://fantagioco.altervista.org/save_user.php
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            name: name, // Passa il nome dell'utente
-        }),
+      const response = await axios.post("http://localhost/save_user", {
+        name: name
+      }, {
+        headers: { "Content-Type": "application/json" }
       });
-      const result = await response.json();
+      const result = response.data;
 
       // Gestisci la risposta
       if (result.success) {
@@ -287,15 +287,14 @@ export default defineComponent({
     },
     async sendSquad() {
       try {
-        const response = await fetch('http://localhost/save_squad', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ squad: this.teamPlayers, name : this.user?.name })
+        const response = await axios.post("http://localhost/save_squad", {
+          squad: this.teamPlayers, 
+          name: this.user?.name
+        }, {
+          headers: { "Content-Type": "application/json" }
         });
-        
-        const result = await response.json();
+
+        const result = response.data;
 
         if (!result.success) {
           throw new Error('Errore nel salvataggio della squadra');

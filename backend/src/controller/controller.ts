@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { getConnection } from '../config/db';
+import { Exception } from "sass";
 
 export async function createLog(req: Request, res: Response) {
     try {
@@ -37,18 +38,21 @@ export async function deleteLog(req: Request, res: Response) {
 
 export async function getUser(req: Request, res: Response) {
     try {
-        const { name } = req.params;
+        const { name } = req.body;
 
         const query = 'SELECT * FROM users WHERE name = ?';
         const values = [name];
 
         const connection = await getConnection();
-        const [rows] = await connection.execute(query, values);
+        const [rows]: any = await connection.execute(query, values);
 
-        res.status(200).json({ success: true, data: rows });
-    } catch (error) {
-        console.error('Errore durante il recupero della nota:', error);
-        res.status(500).json({ success: false, message: 'Errore durante il recupero della nota' });
+        if(rows.length == 0) {
+            throw new Error("Nessun utente presente!")
+        }
+
+        res.status(200).json({ success: true, data: rows[0] });
+    } catch (e: any) {
+        res.status(200).json({ success: false, message: String(e) });
     }
 }
 
@@ -85,13 +89,14 @@ export async function saveUser(req: Request, res: Response) {
         res.status(201).json({ success: true, message: 'Utente salvato!' });
     } catch (error) {
         console.error('Errore durante il salvataggio dell\'utente:', error);
-        res.status(500).json({ success: false, message: 'Errore durante il salvataggio dell\'utente' });
+        res.status(200).json({ success: false, message: 'Errore durante il salvataggio dell\'utente' });
     }
 }
 
 export async function saveSquad(req: Request, res: Response) {
     try {
-        const { name, squad } = req.body;
+        
+        const { squad, name } = req.body;
 
         const squadString = squad.join('.');
 

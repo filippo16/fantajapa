@@ -1,0 +1,407 @@
+[
+  {
+    "title": "Punteggi Fantamaratona",
+    "items": [
+      {
+        "text": "Se qualcuno dei giocatori perde la pazienza",
+        "points": -10,
+        "target": "all"
+      },
+      {
+        "text": "“Cambia gioco”",
+        "points": -5,
+        "target": "all"
+      },
+      {
+        "text": "Japa dice “caso chiuso”",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Qualcuno in chat usa emote di altri canali",
+        "points": -5,
+        "target": "all"
+      },
+      {
+        "text": "Qualcuno chiede info su altri streamer",
+        "points": -5,
+        "target": "all"
+      },
+      {
+        "text": "Japa fa un incidente auto in un qualsiasi gioco",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Uno dei giocatori regala una sub",
+        "points": 3,
+        "target": "undefined"
+      },
+      {
+        "text": "Japa beve acqua",
+        "points": 1,
+        "target": "all"
+      },
+      {
+        "text": "Quando GTA?",
+        "points": -4,
+        "target": "all"
+      },
+      {
+        "text": "Obiettivo sub raggiunto",
+        "points": 3,
+        "target": "all"
+      },
+      {
+        "text": "Japa dorme",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Japa legge tiktok e non twitch",
+        "points": -5,
+        "target": "all"
+      },
+      {
+        "text": "Alex non legge i messaggi dei mod",
+        "points": 4,
+        "target": "all"
+      },
+      {
+        "text": "Niko/fireblue chiede a Federica quando diventerà mod",
+        "points": 2,
+        "target": "all"
+      },
+      {
+        "text": "Japa dice tua mamma",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "La maratona arriva a 48 ore",
+        "points": 20,
+        "target": "all"
+      },
+      {
+        "text": "Sukhoi fa il sindacalista",
+        "points": 2,
+        "target": "all"
+      },
+      {
+        "text": "Compleanno in chat",
+        "points": -3,
+        "target": "all"
+      },
+      {
+        "text": "Japa scamma una sub",
+        "points": -5,
+        "target": "all"
+      },
+      {
+        "text": "Japa va in bagno",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Japa chiama Ayca",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Sukhoi chiede un pronostico",
+        "points": -1,
+        "target": "all"
+      },
+      {
+        "text": "Silenziamento a caso (per chi lo ha fatto)",
+        "points": -1,
+        "target": "all"
+      },
+      {
+        "text": "Bea copia qualcuno",
+        "points": 3,
+        "target": "all"
+      },
+      {
+        "text": "Canale Discord",
+        "points": 3,
+        "target": "all"
+      },
+      {
+        "text": "La chat diventa tinder",
+        "points": -2,
+        "target": "all"
+      },
+      {
+        "text": "I mod di twitch vanno a salutare i mod tiktok e viceversa",
+        "points": 3,
+        "target": "all"
+      },
+      {
+        "text": "Mod scomparsi appaiono",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Japa scrive un nome sulla lavagna",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Qualcuno in chat chiede 'come stai'",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Spect spamma emote a caso",
+        "points": 10,
+        "target": "all"
+      },
+      {
+        "text": "Spect manda più di due emote in un solo messaggio",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Spect fa una domanda stupida",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Spect litiga con un altro spect",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Crasha qualsiasi gioco",
+        "points": 15,
+        "target": "all"
+      },
+      {
+        "text": "Sax e Sceriffo ridono insieme",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Sax muore",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Parte una rapina",
+        "points": 7,
+        "target": "all"
+      },
+      {
+        "text": "Sax spara a qualcuno",
+        "points": -2,
+        "target": "all"
+      },
+      {
+        "text": "Sax va in pasticceria",
+        "points": -3,
+        "target": "all"
+      },
+      {
+        "text": "Sax va a girare la ruota e vince qualcosa",
+        "points": 10,
+        "target": "all"
+      },
+      {
+        "text": "Sax risponde 10-4 in radio",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Sax inciampa",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Sax ammanetta qualcuno",
+        "points": 15,
+        "target": "all"
+      }
+    ]
+  },
+  {
+    "title": "Punti Individuali",
+    "items": [
+      {
+        "text": "Lissa ha mal di testa",
+        "points": -10,
+        "target": "all"
+      },
+      {
+        "text": "Zuzi, Lissa o Garfield scrivono “devo editare” o simili",
+        "points": -10,
+        "target": "all"
+      },
+      {
+        "text": "Criminale fa una domanda stupida",
+        "points": -3,
+        "target": "all"
+      },
+      {
+        "text": "Criminale aiuta i mod",
+        "points": 3,
+        "target": "all"
+      },
+      {
+        "text": "Lissa fa 20 !lissalabs",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Gatto manda 1500 bit totali",
+        "points": 15,
+        "target": "all"
+      },
+      {
+        "text": "Un top tonator regala 25 sub",
+        "points": 10,
+        "target": "all"
+      },
+      {
+        "text": "Japa bullizza uno di noi",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Japa chiama Lissa “LA LISSA” o Gaia “LA GAIA”",
+        "points": 10,
+        "target": "all"
+      },
+      {
+        "text": "Pippo aiuta i mod",
+        "points": 3,
+        "target": "all"
+      },
+      {
+        "text": "Qualcuno dei giocatori parla di cibo",
+        "points": -5,
+        "target": "all"
+      },
+      {
+        "text": "Juri parla di lavoro",
+        "points": -3,
+        "target": "all"
+      },
+      {
+        "text": "Sukhoi fa il sindacalista",
+        "points": 10,
+        "target": "all"
+      },
+      {
+        "text": "Sukhoi chiede un pronostico",
+        "points": -5,
+        "target": "all"
+      },
+      {
+        "text": "Categoria spect spamma",
+        "points": -5,
+        "target": "all"
+      },
+      {
+        "text": "Spect fa complimenti ai mod",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Juri bullizza qualcuno",
+        "points": -10,
+        "target": "all"
+      },
+      {
+        "text": "Zuzi parla di sushi",
+        "points": -5,
+        "target": "all"
+      },
+      {
+        "text": "Pippo chiama Juri o Crimi amore mio",
+        "points": -10,
+        "target": "all"
+      },
+      {
+        "text": "Gaia si addormenta prima delle 2",
+        "points": -10,
+        "target": "all"
+      },
+      {
+        "text": "Auri fa l'aurilabs",
+        "points": 5,
+        "target": "all"
+      },
+      {
+        "text": "Fede risponde a Niko",
+        "points": -5,
+        "target": "all"
+      },
+      {
+        "text": "Leo fa ingelosire Niko",
+        "points": 5,
+        "target": "all"
+      }
+    ]
+  },
+  {
+    "title": "Bonus",
+    "items": [
+      {
+        "text": "BONUS Ban",
+        "points": 30,
+        "target": "all"
+      },
+      {
+        "text": "BONUS Hater",
+        "points": 15,
+        "target": "all"
+      },
+      {
+        "text": "BONUS Pikachu",
+        "points": 100,
+        "target": "all"
+      },
+      {
+        "text": "BONUS !SAB",
+        "points": 10,
+        "target": "all"
+      },
+      {
+        "text": "BONUS Attacco Bot",
+        "points": 20,
+        "target": "all"
+      },
+      {
+        "text": "BONUS Maratona al max",
+        "points": 50,
+        "target": "all"
+      }
+    ]
+  },
+  {
+    "title": "Malus",
+    "items": [
+      {
+        "text": "Corrente",
+        "points": -50,
+        "target": "all"
+      },
+      {
+        "text": "Corrente + Lamentela",
+        "points": -65,
+        "target": "all"
+      },
+      {
+        "text": "JAMAMMA",
+        "points": -10,
+        "target": "all"
+      },
+      {
+        "text": "Segnalazione su tiktok",
+        "points": -20,
+        "target": "all"
+      }
+    ]
+  }
+]
