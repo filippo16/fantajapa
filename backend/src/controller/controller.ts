@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { getConnection } from '../config/db';
-import { Exception } from "sass";
 
 export async function createLog(req: Request, res: Response) {
     try {
