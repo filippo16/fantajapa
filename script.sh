@@ -10,3 +10,7 @@ ln -s /opt/nodejs/bin/npm /usr/bin/npm
 apt install mysql-server
 
 #mysql -u root -p < ./backend/sql/my_notesync2.sql
+
+
+#ALTER USER 'root'@'localhost' IDENTIFIED BY 'NuovaPasswordSicura!';
+#FLUSH PRIVILEGES;
