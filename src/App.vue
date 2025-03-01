@@ -219,7 +219,6 @@ export default defineComponent({
       //const act = jwt.encode(this.user, jwt_sec);
       const act = await new SignJWT(this.user)
         .setProtectedHeader({ alg: 'HS256' })  // Algoritmo di firma
-        .sign(secret);
       Cookies.set(this.COOKIE_NAME, act, { expires: 10, path: '/', httpOnly: true});
     },
     async getCookie() {
