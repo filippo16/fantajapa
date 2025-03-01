@@ -23,9 +23,9 @@
 
   <!-- Header -->
   <header class="bg-primary py-3 d-flex justify-content-between align-items-center">
-    <h1 class="fs-4 ms-3">Ciao {{ user?.name }}</h1>
+    <h1 class="fs-4 ms-3">Ciao, {{ user?.name }}</h1>
     <div class="d-flex align-items-center gap-4 me-3">
-      <span class="badge bg-secondary fs-5">Punti: {{ user?.score }}</span>
+      <span class="badge bg-success fs-5">Punti: {{ user?.score }}</span>
       <button v-if="user" @click="logout" class="btn btn-danger d-flex align-items-center gap-2">Logout</button>
     </div>
   </header>
@@ -152,6 +152,16 @@
 </div>
 </template>
 
+
+<style scoped>
+.bg-primary {
+  background-color: #729D9D !important; 
+}
+
+.bg-secondary {
+  background-color: #E1E1E1 !important;
+}
+</style>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
