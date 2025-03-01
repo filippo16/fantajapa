@@ -45,4 +45,12 @@ ALTER TABLE `action_logs`
 
 ALTER TABLE `action_logs`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+
+
+
+CREATE USER 'fantajapa'@'localhost' IDENTIFIED BY 'ciaociao88';
+GRANT ALL PRIVILEGES ON *.* TO 'fantajapa'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
 COMMIT;
