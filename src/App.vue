@@ -237,7 +237,7 @@ export default defineComponent({
     },
     async getUser(name: string) {
       console.log(name)
-      const response = await axios.post("https://34.60.100.110/get_user", {
+      const response = await axios.post("http://34.70.95.149/get_user", {
         name: name
       }, {
         headers: { "Content-Type": "application/json" }
@@ -255,7 +255,7 @@ export default defineComponent({
       }
     },
     async getUsers() {
-      const response = await fetch("https://34.60.100.110/get_users");
+      const response = await fetch("http://34.70.95.149/get_users");
       const result = await response.json();
 
       if (result.success) {
@@ -266,7 +266,7 @@ export default defineComponent({
       }
     },
     async addUser(name: string) {
-      const response = await axios.post("https://34.60.100.110/save_user", {
+      const response = await axios.post("http://34.70.95.149/save_user", {
         name: name
       }, {
         headers: { "Content-Type": "application/json" }
@@ -294,7 +294,7 @@ export default defineComponent({
     },
     async sendSquad() {
       try {
-        const response = await axios.post("https://34.60.100.110/save_squad", {
+        const response = await axios.post("http://34.70.95.149/save_squad", {
           squad: this.teamPlayers, 
           name: this.user?.name
         }, {
@@ -332,7 +332,7 @@ export default defineComponent({
     },
     async sendLog(action_log: ActionLog) {
       try {
-        const response = await fetch('https://34.60.100.110/save_log', {
+        const response = await fetch('http://34.70.95.149/save_log', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -357,7 +357,7 @@ export default defineComponent({
     },
     async delLog(id: number, name: string) {
       try {
-        const response = await fetch('https://34.60.100.110/delete_log', {
+        const response = await fetch('http://34.70.95.149/delete_log', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -386,7 +386,7 @@ export default defineComponent({
         this.eventSource.close();
       }
 
-      this.eventSource = new EventSource('https://34.60.100.110/sse');
+      this.eventSource = new EventSource('http://34.70.95.149/sse');
 
       this.eventSource.onmessage = (event) => {
         console.log('Received message:', event.data);
