@@ -166,10 +166,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Cookies from 'js-cookie';
-import { SignJWT } from 'jose';
+//import { SignJWT } from 'jose';
 import type { User, Users, ActionLog, itemRules, Rules, popupType } from './types';
 import Popup from './components/Popup.vue';
-import { jwtDecode } from 'jwt-decode';
+//import { jwtDecode } from 'jwt-decode';
 import PopupConfirm from './components/PopupConfirm.vue';
 import PopupInput from './components/PopupInput.vue';
 import rulesData from '../public/legend.json';
@@ -214,13 +214,13 @@ export default defineComponent({
     },
     async setCookie() {
       //const jwt_sec = 'foo';
-      const secret = new TextEncoder().encode("your_secret_key");
+      //const secret = new TextEncoder().encode("your_secret_key");
       if (!this.user) {return;}
       //const act = jwt.encode(this.user, jwt_sec);
-      const act = await new SignJWT(this.user)
-        .setProtectedHeader({ alg: 'HS256' })
-        .sign(secret)  // Algoritmo di firma
-      Cookies.set(this.COOKIE_NAME, act, { expires: 10, path: '/'});
+      // const act = await new SignJWT(this.user)
+      //   .setProtectedHeader({ alg: 'HS256' })
+      //   .sign(secret)  // Algoritmo di firma
+      Cookies.set(this.COOKIE_NAME, JSON.stringify(this.user), { expires: 10, path: '/'});
     },
     async getCookie() {
       const act = Cookies.get(this.COOKIE_NAME);
@@ -228,7 +228,7 @@ export default defineComponent({
       // Restituisce i dati dell'utente contenuti nell'access token, oppure null se il token è mancante o invalido
       if (!act) return null;
       try {
-        const user = jwtDecode(act) as User;
+        const user = JSON.parse(act) as User;//jwtDecode(act) as User;
         this.user = user;
         return user;
       } catch {
